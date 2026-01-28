@@ -1,0 +1,15 @@
+name = "catalunya"
+type = "javascript"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "catalunya-prod"
+route = "*.cat/*"
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.{ts,tsx,css}"]
+
+[build.upload]
+format = "service-worker"
